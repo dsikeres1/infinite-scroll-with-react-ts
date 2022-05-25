@@ -5,7 +5,7 @@ import { getPostList, postType } from '../../model/PostList';
 import '../InfiniteScroll.css';
 
 const InfiniteScroll = (): JSX.Element => {
-  const loader = useRef<any>(null);
+  const loader = useRef<HTMLDivElement | null>(null);
   const [page, setPage] = useState<number>(1);
   const [posts, setPosts] = useState<postType[]>(getPostList(1));
   const handleObserver = useCallback(
@@ -20,7 +20,9 @@ const InfiniteScroll = (): JSX.Element => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(handleObserver, { threshold: 1 });
-    observer.observe(loader.current);
+    if (loader.current) {
+      observer.observe(loader.current);
+    }
 
     return () => observer && observer.disconnect();
   }, [handleObserver]);
