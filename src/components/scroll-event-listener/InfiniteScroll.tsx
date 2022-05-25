@@ -1,6 +1,6 @@
 // InfiniteScroll.tsx
 import React, { useState, useCallback, useEffect } from 'react';
-import { getPostList, postType } from '../../model/postList';
+import { getPostList, postType } from '../../model/PostList';
 
 import '../InfiniteScroll.css';
 

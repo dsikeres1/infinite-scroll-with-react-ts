@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-// import ScrollEventListenerInfiniteScroll from './components/scroll_event_listener/InfiniteScroll';
-import IntersectionObserverInfiniteScroll from './components/intersection_observer/InfiniteScroll';
+// import ScrollEventListenerInfiniteScroll from './components/scroll-event-listener/InfiniteScroll';
+import IntersectionObserverInfiniteScroll from './components/intersection-observer/InfiniteScroll';
 
 function App() {
   // return <ScrollEventListenerInfiniteScroll />;
