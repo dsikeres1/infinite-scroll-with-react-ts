@@ -5,7 +5,7 @@ import LoadingView from '../LoadingView';
 import { PageDataType } from '../../type';
 
 const InfiniteScroll = (): JSX.Element => {
-  const loader = useRef<any>(null);
+  const loader = useRef<HTMLDivElement | null>(null);
   const [page, setPage] = useState<PageDataType | null>(null);
   const [posts, setPosts] = useState<PostType[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -62,7 +62,9 @@ const InfiniteScroll = (): JSX.Element => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(handleObserver, { threshold: 1 });
-    observer.observe(loader.current);
+    if (loader.current) {
+      observer.observe(loader.current);
+    }
 
     return () => observer && observer.disconnect();
   }, [handleObserver]);
