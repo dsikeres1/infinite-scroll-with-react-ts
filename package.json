@@ -47,7 +47,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.jun:dsikeres1/infinite-scroll-with-react-ts.git"
+    "url": "git@github.com:dsikeres1/infinite-scroll-with-react-ts.git"
   },
   "keywords": [
     "infinite-scroll",
