@@ -1,6 +1,6 @@
 {
   "name": "infinite-scroll-with-react-ts",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "private": true,
   "description": "infinite scroll with react / typescript",
   "main": "index.tsx",
