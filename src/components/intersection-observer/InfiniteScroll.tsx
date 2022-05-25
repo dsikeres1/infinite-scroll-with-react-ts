@@ -1,13 +1,8 @@
 import React, { useState, useCallback, useEffect, useRef } from 'react';
 import { getPostList, PostType } from '../../model/PostList';
-
 import '../InfiniteScroll.css';
 import LoadingView from '../LoadingView';
-
-type PageDataType = {
-  page: number;
-  lastPage: number | undefined;
-};
+import { PageDataType } from '../../type';
 
 const InfiniteScroll = (): JSX.Element => {
   const loader = useRef<any>(null);
